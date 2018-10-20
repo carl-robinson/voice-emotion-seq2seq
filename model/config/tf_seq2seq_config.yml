@@ -1,0 +1,38 @@
+model: AttentionSeq2Seq
+model_params:
+  attention.class: seq2seq.decoders.attention.AttentionLayerBahdanau
+  attention.params:
+    num_units: 128
+  bridge.class: seq2seq.models.bridges.ZeroBridge
+  embedding.dim: 128
+  embedding.share: True
+  encoder.class: seq2seq.encoders.BidirectionalRNNEncoder
+  encoder.params:
+    rnn_cell:
+      cell_class: LSTMCell
+      cell_params:
+        num_units: 128
+        use_peepholes: False
+      dropout_input_keep_prob: 0.8
+      dropout_output_keep_prob: 1.0
+      num_layers: 2
+      residual_connections: False
+  decoder.class: seq2seq.decoders.AttentionDecoder
+  decoder.params:
+    rnn_cell:
+      cell_class: LSTMCell
+      cell_params:
+        num_units: 128
+        use_peepholes: False
+      dropout_input_keep_prob: 0.8
+      dropout_output_keep_prob: 1.0
+      num_layers: 3
+      residual_connections: True
+    max_decode_length: 128
+  optimizer.name: Adam
+  optimizer.params:
+    epsilon: 0.00000001
+  optimizer.learning_rate: 0.001
+  source.max_seq_len: 128
+  source.reverse: false
+  target.max_seq_len: 128
