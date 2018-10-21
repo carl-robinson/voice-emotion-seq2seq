@@ -1,0 +1,2 @@
+These are the files that I changed from the original google/seq2seq repo
+They are already integrated into carl-robinson/seq2seq, which is linked as a submodule, so there's no need to use them - they just serve as a reference
