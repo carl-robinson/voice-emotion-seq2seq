@@ -1,15 +1,15 @@
 # voice-emotion-seq2seq
 Voice emotion conversion model for DS/ML master's thesis. F0 contour mapping in sequence-to-sequence RNN-LSTM architecture in Tensorflow.
 
-## Resources in this repo
-__audio/__ - samples of original and transformed voice samples in WAV format
-__data/__ - Matlab MAT files produced by AudioSculpt, containing F0 contours and syllable/phoneme alignments
-__documentation/__ - PDF reports on the state of the art, aims, method, experimental setup, results and discussion
-__model/__ - python code to build your own seq2seq model
-__postprocessing/__ - code to process the outputted F0 contours and apply to neutral WAV files
-__preprocessing/__ - code to process the MAT files to create input data for the model
-__utilities/__ -  code to rename WAV files for use in the online survey, and to process survey results
-__visualisation/__ -  jupyter notebooks to visualise the F0 contours
+## Directories
+* __audio/__ - samples of original and transformed voice samples in WAV format
+* __data/__ - Matlab MAT files produced by AudioSculpt, containing F0 contours and syllable/phoneme alignments
+* __documentation/__ - PDF reports on the state of the art, aims, method, experimental setup, results and discussion
+* __model/__ - python code to build your own seq2seq model
+* __postprocessing/__ - code to process the outputted F0 contours and apply to neutral WAV files
+* __preprocessing/__ - code to process the MAT files to create input data for the model
+* __utilities/__ -  code to rename WAV files for use in the online survey, and to process survey results
+* __visualisation/__ -  jupyter notebooks to visualise the F0 contours
 
 ## Getting Started
 
@@ -18,12 +18,12 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 Libraries:
-Python 3.6, SciPy, Matplotlib (Anaconda recommended)
-Tensorflow 1.4 or later (1.8 recommended)
-[as_pysrc](http://forge.ircam.fr/p/as_pysrc/) - collection of modules for signal processing, maintained by the AS team on forge.ircam.fr (SSH access needed)
+* Python 3.6, SciPy, Matplotlib (Anaconda recommended)
+* Tensorflow 1.4 or later (1.8 recommended)
+* [as_pysrc](http://forge.ircam.fr/p/as_pysrc/) - collection of modules for signal processing, maintained by the AS team on forge.ircam.fr (SSH access needed)
 
 Software:
-[AudioSculpt + IrcamAlign](http://anasynth.ircam.fr/home/english/software/audiosculpt) to generate .MAT files with F0 values and syllable/phoneme alignments
+* [AudioSculpt + IrcamAlign](http://anasynth.ircam.fr/home/english/software/audiosculpt) to generate .MAT files with F0 values and syllable/phoneme alignments
 
 ### Pre-processing & Model Training Process
 * __tf_seq2seq_data_processing_phoneme_to_phoneme.ipynb__
